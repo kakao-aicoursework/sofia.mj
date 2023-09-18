@@ -11,7 +11,7 @@ import pynecone as pc
 from pynecone.base import Base
 
 # openai.api_key = "<YOUR_OPENAI_API_KEY>"
-# openai.api_key = "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"
+# openai.api_key = "키가필요해"
 
 
 parallel_example = {
