@@ -21,15 +21,15 @@ def read_prompt_template(file_path: str) -> str:
 
 
 chat = ChatOpenAI(temperature=0.8)
-system_message = "assistant는 카카오 싱크를 설명해주는 봇이다. user의 내용을 참고하여 사용법을 작성하라"
+system_message = "assistant는 카카오 싱크를 설명해주는 봇이다. user의 질문을 참고하여 사용법을 작성하라"
 system_message_prompt = SystemMessage(content=system_message)
 
 # documents = read_prompt_template('/tmp/datas/project_data_카카오싱크.txt')
 human_template = (
-    "유저의 질문은 다음과 같습니다 {user_question}\n"
+    "user의 질문은 다음과 같습니다 {user_question}\n"
     "아래는 카카오싱크의 설명입니다 \n"
     "{documents}\n"
-    "사용법을 목차로 요약해"
+    "설명을 기반으로 사용법을 목차로 요약해라"
 )
 
 message_prompt = HumanMessagePromptTemplate.from_template(human_template)
